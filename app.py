@@ -62,6 +62,9 @@ def air_quality():
     data = get_air_quality(city)
     return jsonify(data)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
+if __name__ == "__main__":
+    # Required for Render Deployment
+    app.run(host="0.0.0.0", port=10000, debug=True)
